@@ -1,21 +1,15 @@
 from pydantic import BaseModel
 
 class GenerateImageRequest(BaseModel):
+    prompt: str
     model_version: str
-
-    model_config = {
-        'protected_namespaces': ()
-    }
 
 class GenerateImageResponse(BaseModel):
     image_url: str
 
 class FineTuneRequest(BaseModel):
     model_version: str
-
-    model_config = {
-        'protected_namespaces': ()
-    }
+    dataset_url: str
 
 class FineTuneResponse(BaseModel):
     status: str
