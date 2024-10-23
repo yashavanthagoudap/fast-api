@@ -4,6 +4,6 @@ class Settings(BaseSettings):
     replicate_api_token: str
 
     class Config:
-        env_file = ".env"  # Make sure .env file is correctly configured
+        env_file = ".env"
 
 settings = Settings()
